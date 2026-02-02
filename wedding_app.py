@@ -191,7 +191,7 @@ with col2:
 
         # 다운로드
         st.markdown("")
-        download_df = edited_df.drop(columns=['삭제'], errors='ignore')
+        download_df = edited_df.drop(columns=['삭제'], errors='ignore').sort_values(by="No", ascending=True)
         csv_data = download_df.to_csv(index=False, encoding='utf-8-sig').encode('utf-8-sig')
         st.download_button("💾 엑셀 파일 다운로드", csv_data, 'wedding_list_final.csv', 'text/csv', use_container_width=True)
 
