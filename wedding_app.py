@@ -3,7 +3,7 @@ import pandas as pd
 from datetime import datetime
 
 # 페이지 설정
-st.set_page_config(page_title="결혼식 축의금 장부 (Session)", layout="wide")
+st.set_page_config(page_title="결혼식 축의금 장부", page_icon="💍", layout="wide")
 
 # --- 1. 세션 스테이트 초기화 (CSV 파일 대신 메모리 사용) ---
 if 'df' not in st.session_state:
@@ -45,7 +45,7 @@ def add_entry(name, affiliation, amount, memo):
 
 # --- UI 구성 ---
 
-st.title("💍 결혼식 축의금 장부 (Private Session)")
+st.title("💍 결혼식 축의금 장부")
 st.caption("주의: 이 페이지를 '새로고침' 하거나 닫으면 데이터가 사라집니다. 수시로 다운로드 하세요!")
 st.markdown("---")
 
